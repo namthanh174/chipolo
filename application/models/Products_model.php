@@ -35,7 +35,7 @@ class Products_model extends CI_Model {
      */
     public function get_products($search_string = null, $order = null, $order_type = 'Asc', $limit_start = 0, $limit_end = 10) {
 
-        $this->db->select(array('id','title','sub_title','quantity','description','price','special_price'));
+        $this->db->select(array('id','title','sub_title', 'image_key', 'quantity','description','price','special_price', 'free_shipping'));
 
         $this->db->from('products');
         if ($search_string) {

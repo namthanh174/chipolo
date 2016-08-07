@@ -28,8 +28,7 @@
 <div class="container">
     <div id="package-start">
         <div class="row">
-
-
+            <?php foreach ($products as $product): ?>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center noselect">
 
 
@@ -38,155 +37,23 @@
 
 
                         <div class="pack-image">
-                            <img src="assets/site/img/shop/solo.png" class="img-responsive">
+                            <img src="assets/site/img/shop/<?php echo $product['image_key'];?>.png" class="img-responsive">
                             <div class="pack-image-overlay">
                                 <img src="assets/site/img/shop/hover_7.png" class="img-responsive">
                             </div>
                         </div>
 
-                        <div class="pack-subtitle">1x Chipolo</div>
-                        <div class="pack-title">Solo</div>
+                        <div class="pack-subtitle"><?php echo $product['sub_title'];?></div>
+                        <div class="pack-title"><?php echo $product['title'];?></div>
 
                         <div class="pack-buy-button"><span>Buy</span></div>
-                        <div class="pack-price">24,99 &#8364;</div>
+                        <div class="pack-price"><?php echo $product['price'];?></div>
 
-                        <div class="pack-shipping"> + Shipping</div>
+                        <div class="pack-shipping"><?php echo $product['free_shipping'] == 1 ? 'Free Shipping' : '+ Shipping';?> </div>
                     </a>
                 </div>
             </div>
-
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center noselect">
-
-
-                <div class="pack" data-item-id="2">
-                    <a href="/shop/customize/2" class="pack-link">
-
-
-                        <div class="pack-image">
-                            <img src="assets/site/img/shop/duo.png" class="img-responsive">
-                            <div class="pack-image-overlay">
-                                <img src="assets/site/img/shop/hover_7.png" class="img-responsive">
-                            </div>
-                        </div>
-
-                        <div class="pack-subtitle">2x Chipolo</div>
-                        <div class="pack-title">Duet</div>
-
-                        <div class="pack-buy-button"><span>Buy</span></div>
-                        <div class="pack-price">44,99 &#8364;</div>
-
-                        <div class="pack-shipping"> + Shipping</div>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center noselect">
-
-
-                <div class="pack active" data-item-id="3">
-                    <a href="/shop/customize/3" class="pack-link">
-
-                        <div class="pack-ribbon"><span>Most Popular</span></div>                            
-                        <div class="pack-image">
-                            <img src="assets/site/img/shop/threes_a_party.png" class="img-responsive">
-                            <div class="pack-image-overlay">
-                                <img src="assets/site/img/shop/hover_7.png" class="img-responsive">
-                            </div>
-                        </div>
-
-                        <div class="pack-subtitle">3x Chipolo</div>
-                        <div class="pack-title">Three's A Party</div>
-
-                        <div class="pack-buy-button"><span>Buy</span></div>
-                        <div class="pack-price">69,99 &#8364;</div>
-
-                        <div class="pack-shipping"> + Shipping</div>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center noselect">
-
-
-                <div class="pack" data-item-id="4">
-                    <a href="/shop/customize/4" class="pack-link">
-
-                        <div class="pack-ribbon"><span>Save 10,00 &#8364;</span></div>                            
-                        <div class="pack-image">
-                            <img src="assets/site/img/shop/family_pack.png" class="img-responsive">
-                            <div class="pack-image-overlay">
-                                <img src="assets/site/img/shop/hover_7.png" class="img-responsive">
-                            </div>
-                        </div>
-
-                        <div class="pack-subtitle">4x Chipolo</div>
-                        <div class="pack-title">Family Pack</div>
-
-                        <div class="pack-buy-button"><span>Buy</span></div>
-                        <div class="pack-price">89,99 &#8364;</div>
-
-                        <div class="pack-shipping"> + Shipping</div>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center noselect">
-
-
-                <div class="pack" data-item-id="5">
-                    <a href="/shop/customize/5" class="pack-link">
-
-                        <div class="pack-ribbon"><span>Save 20,00 &#8364;</span></div>                            
-                        <div class="pack-image">
-                            <img src="assets/site/img/shop/six_pack.png" class="img-responsive">
-                            <div class="pack-image-overlay">
-                                <img src="assets/site/img/shop/hover_7.png" class="img-responsive">
-                            </div>
-                        </div>
-
-                        <div class="pack-subtitle">6x Chipolo</div>
-                        <div class="pack-title">Six Pack</div>
-
-                        <div class="pack-buy-button"><span>Buy</span></div>
-                        <div class="pack-price">129,99 &#8364;</div>
-
-                        <div class="pack-shipping"> + Shipping</div>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center noselect">
-
-
-                <div class="pack" data-item-id="6">
-                    <a href="/shop/customize/6" class="pack-link">
-
-                        <div class="pack-ribbon"><span>Free Shipping</span></div>                            
-                        <div class="pack-image">
-                            <img src="assets/site/img/shop/color_palette.png" class="img-responsive">
-                            <div class="pack-image-overlay">
-                                <img src="assets/site/img/shop/hover_7.png" class="img-responsive">
-                            </div>
-                        </div>
-
-                        <div class="pack-subtitle">9x Chipolo</div>
-                        <div class="pack-title">Color Palette</div>
-
-                        <div class="pack-buy-button"><span>Buy</span></div>
-                        <div class="pack-price">199,99 &#8364;</div>
-
-
-                        <div class="pack-shipping">Free Shipping</div>
-                    </a>
-                </div>
-            </div>
-
-
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

@@ -4,6 +4,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
+    /**
+     * Responsable for auto load the model
+     * @return void
+     */
+    public function __construct() {
+        parent::__construct();
+        $this->load->model('products_model');
+    }
+    
     public function index() {
         $data = array();
         $data['page'] = 'site/home';
@@ -51,6 +60,8 @@ class Home extends CI_Controller {
     }
     public function shop() {
         $data = array();
+        $products = $this->products_model->get_products();
+        $data['products'] = $products;
         $data['page'] = 'site/shop';
         $data['title'] = 'Chipolo Shop :: Select your package';
         $this->load->view('site/layout/layout', $data);
