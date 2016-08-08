@@ -62,7 +62,7 @@ class Home extends CI_Controller {
         $data = array();
         $products = $this->products_model->get_products();
         $data['products'] = $products;
-        $data['page'] = 'site/shop';
+        $data['page'] = 'site/shop/shop';
         $data['title'] = 'Chipolo Shop :: Select your package';
         $this->load->view('site/layout/layout', $data);
     }

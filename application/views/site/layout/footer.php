@@ -112,7 +112,7 @@
             <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12">
                 <ul class="footer-main list-inline">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/how-it-works">How It Works</a></li>
+                    <li><a href="<?php echo base_url(); ?>how-it-works">How It Works</a></li>
                     <li><a href="<?php echo base_url(); ?>design">Design</a></li>
                     <li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
                     <li><a href="<?php echo base_url(); ?>support">Support</a></li>
