@@ -50,44 +50,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'home';
-$route['how-it-works']='home/howItWork';
-$route['design']='home/design';
-$route['blog']='home/blog';
-$route['support']='home/support';
-$route['jobs']='home/job';
-$route['shop']='home/shop';
-$route['login']='home/login';
 
-$route['business']='home/business';
-$route['kickstarter']='home/kickstarter';
-$route['press']='home/press';
-$route['privacy-policy']='home/privacy_policy';
-$route['terms-of-use']='home/terms_of_use';
-$route['returns-and-refunds']='home/refund';
-$route['contact']='home/contact';
-$route['reviews']='home/review';
+$route['how-it-works']='site/how_it_work';
+$route['design']='site/design';
+$route['blog']='site/blog';
+$route['support']='site/support';
+$route['jobs']='site/job';
+$route['shop']='site/shop';
+$route['login']='site/login';
+
+$route['business']='site/business';
+$route['kickstarter']='site/kickstarter';
+$route['press']='site/press';
+$route['privacy-policy']='site/privacy_policy';
+$route['terms-of-use']='site/terms_of_use';
+$route['returns-and-refunds']='site/refund';
+$route['contact']='site/contact';
+$route['reviews']='site/review';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 /*admin*/
-$route['admin'] = 'user/index';
-$route['admin/signup'] = 'user/signup';
-$route['admin/create_member'] = 'user/create_member';
-$route['admin/login'] = 'user/index';
-$route['admin/logout'] = 'user/logout';
-$route['admin/login/validate_credentials'] = 'user/validate_credentials';
+$route['admin'] = 'admin/user/index';
+$route['admin/signup'] = 'admin/user/signup';
+$route['admin/create_member'] = 'admin/user/create_member';
+$route['admin/login'] = 'admin/user/index';
+$route['admin/logout'] = 'admin/user/logout';
+$route['admin/login/validate_credentials'] = 'admin/user/validate_credentials';
 
-$route['admin/products'] = 'admin_products/index';
-$route['admin/products/add'] = 'admin_products/add';
-$route['admin/products/update'] = 'admin_products/update';
-$route['admin/products/update/(:any)'] = 'admin_products/update/$1';
-$route['admin/products/delete/(:any)'] = 'admin_products/delete/$1';
-$route['admin/products/(:any)'] = 'admin_products/index/$1'; //$1 = page number
+$route['admin/products'] = 'admin/admin_products/index';
+$route['admin/products/add'] = '/admin/admin_products/add';
+$route['admin/products/update'] = 'admin/admin_products/update';
+$route['admin/products/update/(:any)'] = 'admin/admin_products/update/$1';
+$route['admin/products/delete/(:any)'] = 'admin/admin_products/delete/$1';
+$route['admin/products/(:any)'] = 'admin/admin_products/index/$1'; //$1 = page number
 
-$route['admin/manufacturers'] = 'admin_manufacturers/index';
-$route['admin/manufacturers/add'] = 'admin_manufacturers/add';
-$route['admin/manufacturers/update'] = 'admin_manufacturers/update';
-$route['admin/manufacturers/update/(:any)'] = 'admin_manufacturers/update/$1';
-$route['admin/manufacturers/delete/(:any)'] = 'admin_manufacturers/delete/$1';
-$route['admin/manufacturers/(:any)'] = 'admin_manufacturers/index/$1'; //$1 = page number
+$route['admin/manufacturers'] = 'admin/admin_manufacturers/index';
+$route['admin/manufacturers/add'] = 'admin/admin_manufacturers/add';
+$route['admin/manufacturers/update'] = 'admin/admin_manufacturers/update';
+$route['admin/manufacturers/update/(:any)'] = 'admin/admin_manufacturers/update/$1';
+$route['admin/manufacturers/delete/(:any)'] = 'admin/admin_manufacturers/delete/$1';
+$route['admin/manufacturers/(:any)'] = 'admin/admin_manufacturers/index/$1'; //$1 = page number
