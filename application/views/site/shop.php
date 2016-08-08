@@ -1,12 +1,12 @@
-<link href="assets/site/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="assets/site/css/chipolo_shop.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo base_url();?>assets/site/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo base_url();?>assets/site/css/chipolo_shop.css" rel="stylesheet" type="text/css"/>
 
 <div class="fp-banner">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
                 <a href="https://chipolo.net/shop/customize/4">
-                    <img src="assets/site/img/banners/family_pack_eur.jpg" class="img-responsive" nopin="nopin">
+                    <img src="<?php echo base_url();?>assets/site/img/banners/family_pack_eur.jpg" class="img-responsive" nopin="nopin">
                 </a>
             </div>
         </div>
@@ -33,13 +33,13 @@
 
 
                 <div class="pack" data-item-id="1">
-                    <a href="/shop/customize/1" class="pack-link">
+                    <a href="<?php echo base_url();?>shop/customize/<?php echo $product['id'];?>" class="pack-link">
 
 
                         <div class="pack-image">
-                            <img src="assets/site/img/shop/<?php echo $product['image_key'];?>.png" class="img-responsive">
+                            <img src="<?php echo base_url();?>assets/site/img/shop/<?php echo $product['image_key'];?>.png" class="img-responsive">
                             <div class="pack-image-overlay">
-                                <img src="assets/site/img/shop/hover_7.png" class="img-responsive">
+                                <img src="<?php echo base_url();?>assets/site/img/shop/hover_7.png" class="img-responsive">
                             </div>
                         </div>
 
@@ -154,7 +154,7 @@
 
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
-                <p><img src="assets/site/img/shop/safety.png" class="img-responsive" width="64"></p>
+                <p><img src="<?php echo base_url();?>assets/site/img/shop/safety.png" class="img-responsive" width="64"></p>
                 <p>
                     <strong>Safety</strong><br/>
                     We use SSL connection for the checkout procedure, so your personal data is safe.					</p>
@@ -164,7 +164,7 @@
 
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
-                <p><img src="assets/site/img/shop/delivery.png" class="img-responsive" width="64"></p>
+                <p><img src="<?php echo base_url();?>assets/site/img/shop/delivery.png" class="img-responsive" width="64"></p>
                 <p>
                     <strong>Payment and Delivery</strong><br/>
                     Your order will normally be shipped in three days time from when your order was placed.					</p>
@@ -173,7 +173,7 @@
             <div class="clearfix spaced visible-xs"></div>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
-                <p><img src="assets/site/img/shop/packaging.png" class="img-responsive" width="64"></p>
+                <p><img src="<?php echo base_url();?>assets/site/img/shop/packaging.png" class="img-responsive" width="64"></p>
                 <p>
                     <strong>Packaging</strong><br/>
                     Each Chipolo is packed individually. The Chipolo box includes one Chipolo, extra battery, a key ring and instructions.					</p>
@@ -183,7 +183,7 @@
         <div class="spaced"></div>
         <div class="row">
             <div class="col-xs-12 text-center">
-                <p><img src="assets/site/img/shop/shipping.png" class="img-responsive" width="64"></p>
+                <p><img src="<?php echo base_url();?>assets/site/img/shop/shipping.png" class="img-responsive" width="64"></p>
                 <p>
                     <strong>International Shipping</strong><br/>
                     Your Chipolo(s) will ship in 1-2 business days DHL Express overseas. All orders are shipped with delivery signature required.<br/>You are responsible for all duties and custom taxes when picking up your Chipolo(s).					</p>
@@ -224,4 +224,4 @@
         </div>
     </div>
 </div>
-<script src="assets/site/js/jquery_1.11.0.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>assets/site/js/jquery_1.11.0.js" type="text/javascript"></script>
