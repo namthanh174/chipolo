@@ -51,7 +51,7 @@
             
                         <div class="col-colorpicker text-center">
                 <div class="picker-container noselect">
-                                        <div class="pick picker-0 active" "="" data-index="0">
+                                        <div class="pick picker-0 active" data-index="0">
                         <input id="color-0" type="hidden" name="colors[]" value="" class="hidden-selection" autocomplete="off">
                         <img src="<?php echo base_url();?>assets/site/img/shop/colorpicker/_blank.png" class="img-responsive">
                     </div>
@@ -117,7 +117,7 @@
                             <img src="<?php echo base_url();?>assets/site/img/shop/gallery/f_pink_5.jpg" class="img-responsive" data-i="5">
                         </div>
                                                 <div class="item">
-                            <img src="/<?php echo base_url();?>assets/site/img/shop/gallery/f_pink_6.jpg" class="img-responsive" data-i="6">
+                            <img src="<?php echo base_url();?>assets/site/img/shop/gallery/f_pink_6.jpg" class="img-responsive" data-i="6">
                         </div>
                                             </div>
                 </div>
@@ -221,43 +221,6 @@
 
 </style>
 
-<!-- Facebook Pixel Code -->
-<script>
-    !function (f, b, e, v, n, t, s) {
-        if (f.fbq)
-            return;
-        n = f.fbq = function () {
-            n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        };
-        if (!f._fbq)
-            f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window,
-            document, 'script', '//connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init', '1674123929470730');
-    fbq('track', "PageView");
-</script>
-
-<script>
-    $(document).ready(function () {
-        setTimeout(function () {
-            $('#fvc1').flexVerticalCenter({cssAttribute: 'padding-top', parentSelector: '.parent'});
-            $('#fvc2').flexVerticalCenter({cssAttribute: 'padding-top', parentSelector: '.parent'});
-        }, 100);
-    });
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1674123929470730&ev=PageView&noscript=1"/></noscript>
-<!-- End Facebook Pixel Code -->
 
 <div class="shop-common">
     <div class="container">
@@ -339,3 +302,178 @@
     </div>
 </div>
 <script src="<?php echo base_url();?>assets/site/js/jquery_1.11.0.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/site/js/owl2/owl.carousel.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+    $("#scroller").mThumbnailScroller({
+            axis: 'y',
+        type: 'click-thumb',
+        });
+
+    // update gallery colors if first chipolo has color on page load
+    var inputs = $(".hidden-selection");
+    $.each(inputs, function(index, input) {
+        var el = $(input);
+        if (el.val() != "") {
+            var color = el.val();
+            updateGalleryColors(color);
+            return false;
+        }
+    });
+
+    $(".pick").click(function() {
+        var index = $(this).data('index');
+        $('.pick').removeClass("active");
+        $(this).addClass("active");
+
+        var color = $(this).find('.hidden-selection').val();
+        if (color != '') {
+            updateGalleryColors(color);
+        }
+    });
+
+    $(".color-btn").click(function(e) {
+        e.preventDefault();
+        $('.pick').removeClass("error");
+        //$(".picker-help-block").slideUp();
+        var color = $(this).data('color-key');
+        var color_hex = $(this).data('color-hex');
+        var color_name = $(this).data('color-name');
+        $('.color-name').text(color_name).css('color', color_hex);
+
+        var src = '/assets/site/img/shop/colorpicker/' + color + '.png';
+        var img = $('.pick.active').find('img').attr('src', src);
+        $('.pick.active').find('input').val(color);
+
+        // move to the next blank chipolo
+        var inputs = $(".hidden-selection");
+        $.each(inputs, function(index, input) {
+            var el = $(input);
+            if (el.val() == "") {
+                var index = $(this).data('index');
+                $('.pick').removeClass("active error");
+                el.parent().addClass("active");
+                return false;
+            }
+        });
+        updateGalleryColors(color);
+        checkValidation();
+    });
+    checkValidation();
+
+    $(".thumbs-up").click(function() {
+        var active = $('.thumb.active');
+        var index = active.data('slide-index');
+        active.removeClass('active');
+        if (index == 0) {
+            index = 5;
+        } else {
+            index--;
+        }
+        var current = $('.thumb-'+index);
+        current.addClass("active");
+
+        if (index != 0) {
+            var pos = parseInt(current.position().top + (current.height()/2)- ($(".mTSWrapper").height()/2)) + 4;
+            $('#scroller').mThumbnailScroller("scrollTo", pos, { speed: 15, easing: 'easeOutStrong'});
+        }
+    });
+
+    $(".thumbs-down").click(function() {
+        var active = $('.thumb.active');
+        var index = active.data('slide-index');
+        active.removeClass('active');
+        if (index == 5) {
+            index = 0;
+        } else {
+            index++;
+        }
+        var current = $('.thumb-'+index);
+        current.addClass("active");
+
+        if (index == 0) {
+            $('#scroller').mThumbnailScroller("scrollTo", 'top', { speed: 15, easing: 'easeOutStrong'});
+        } else {
+            var pos = parseInt(current.position().top + (current.height()/2)- ($(".mTSWrapper").height()/2)) + 4;
+            $('#scroller').mThumbnailScroller("scrollTo", pos, { speed: 15, easing: 'easeOutStrong'});
+        }
+    });
+
+    $(".thumb").click(function() {
+        $('.thumb.active').removeClass('active');
+        $(this).addClass('active');
+
+        if ($(this).data('slide-index') != 0) {
+            var pos = parseInt($(this).position().top + ($(this).height()/2)- ($(".mTSWrapper").height()/2)) + 4;
+            $('#scroller').mThumbnailScroller("scrollTo", pos, { speed: 15, easing: 'easeOutStrong'});
+        }
+    });
+
+    $("form").submit(function() {
+        if (checkValidation()) {
+            return true;
+        }
+
+        var inputs = $(".hidden-selection");
+        $.each(inputs, function(index, input) {
+            var el = $(input);
+            if (el.val() == "") {
+                var index = $(this).data('index');
+                $('.pick').removeClass("active");
+                el.parent().addClass("active error");
+                return false;
+            }
+        });
+
+        $(".color-name").css('color', '#e74c3c').text("* Please select a color!");
+
+        $('html, body').animate({
+            scrollTop: $(".progress-links").offset().top
+        }, 500);
+
+        return false;
+    });
+
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        dots: true,
+        autoplay: true,
+    });
+});
+
+checkValidation = function()
+{
+    var valid = true;
+    var inputs = $(".hidden-selection");
+    $.each(inputs, function(index, input) {
+        var el = $(input);
+        if (el.val() == "") {
+            valid = false;
+        }
+    });
+    if (!valid) {
+        $("input[type=submit]").addClass("disabled");
+    } else {
+        $("input[type=submit]").removeClass("disabled");
+    }
+    return valid;
+};
+
+updateGalleryColors = function(color)
+{
+    var images = $('#carousel-gallery .item img');
+    images.each(function(i,img) {
+        var j = $(img).attr("data-i");
+        $(img).attr('src', '/assets/site/img/shop/gallery/f_'+color+'_'+(j)+'.jpg');
+    });
+
+    var thumbs = $('.thumb img');
+    thumbs.each(function(i,img) {
+        $(img).attr('src', '/assets/site/img/shop/gallery/thumbs/t_'+color+'_'+(i+1)+'.jpg');
+    });
+};
+
+</script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/site/js/jquery.scroller.min.js"></script>

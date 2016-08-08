@@ -91,17 +91,17 @@
 
         <div class="row text-center footer-shop-icons">
             <div class="col-xs-4">
-                <img src="assets/site/img/30_days_guarantee.png" class="img-responsive" width="68" data-pin-no-hover="true">
+                <img src="<?php echo base_url();?>assets/site/img/30_days_guarantee.png" class="img-responsive" width="68" data-pin-no-hover="true">
                 <p class="mt20"><strong>30 Days Money Back Guarantee</strong></p>
                 <p>Should you be dissatisfied with our product, you may return all Chipolo(s) in their original condition within 30 days and we will provide a full refund.<br/><br/><a href="<?php echo base_url();?>terms-of-use" target="_blank"><span class="blue">Find our refund policy here.</span></a></p>
             </div>
             <div class="col-xs-4">
-                <img src="assets/site/img/international_shipping.png" class="img-responsive" width="68" data-pin-no-hover="true">
+                <img src="<?php echo base_url();?>assets/site/imgg/international_shipping.png" class="img-responsive" width="68" data-pin-no-hover="true">
                 <p class="mt20"><strong>International Shipping</strong></p>
                 <p>Your Chipolo(s) will be shipped in 1-3 business days with DHL Express overseas, except for US orders. All orders are shipped with delivery signature required. You are responsible for all duties and custom taxes when picking up your Chipolo(s).</p>
             </div>
             <div class="col-xs-4">
-                <img src="assets/site/img/1_year_warranty.png" class="img-responsive" width="68" data-pin-no-hover="true">
+                <img src="<?php echo base_url();?>assets/site/img/1_year_warranty.png" class="img-responsive" width="68" data-pin-no-hover="true">
                 <p class="mt20"><strong>1 Year Warranty</strong></p>
                 <p>Chipolo warrants that your Chipolo hardware product will be free of form defects in materials and worksmanship for a period of one year.</p>
                 <p><a href="<?php echo base_url();?>terms-of-use" target="_blank"><span class="blue">More about warranty terms.</span></a></p>
@@ -153,37 +153,10 @@
     </div>
 </div>
 </div>
-<img src="https://sp.analytics.yahoo.com/spp.pl?a=10000&.yp=10006654"/>
-<img src="https://amplifypixel.outbrain.com/pixel?mid=008e5c3aa9f39d4390777a17f592d8c69e"/>
-<!-- jquery.effects, jquery.transform2d, jquery.flexverticalcenter. bootstrap, jquery.lettering, jquery.textillate -->
-<script type="text/javascript" src="assets/site/js/output.min.js"></script>
-<script type="text/javascript" src="assets/site/js/chipolo.js"></script>
 
-<script type="text/javascript">
-// Facebook Pixels
-    (function () {
-        var _fbq = window._fbq || (window._fbq = []); if (!_fbq.loaded) {
-            var fbds = document.createElement('script'); fbds.async = true; fbds.src = '//connect.facebook.net/en_US/fbds.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fbds, s); _fbq.loaded = true;
-        }
-        _fbq.push(['addPixelId', '1674123929470730']);})(); window._fbq = window._fbq || []; window._fbq.push(['track', 'PixelInitialized', {}]);
-// Zendesk Widget
-    /*<![CDATA[*/window.zEmbed || function (e, t) {
-        var n, o, d, i, s, a = [], r = document.createElement("iframe");
-        window.zEmbed = function () {
-            a.push(arguments)
-        }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
-        try {
-            o = s
-        } catch (c) {
-            n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s
-        }
-        o.open()._l = function () {
-            var o = this.createElement("script");
-            n && (this.domain = n), o.id = "js-iframe-async", o.src = e, this.t = +new Date, this.zendeskHost = t, this.zEQueue = a, this.body.appendChild(o)
-        }, o.write('<body onload="document._l();">'), o.close()
-    }("https://assets.zendesk.com/embeddable_framework/main.js", "chipolo.zendesk.com"); /*]]>*/
-</script>
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1674123929470730&amp;ev=PixelInitialized" /></noscript>
+<!-- jquery.effects, jquery.transform2d, jquery.flexverticalcenter. bootstrap, jquery.lettering, jquery.textillate -->
+<script type="text/javascript" src="<?php echo base_url();?>assets/site/js/output.min.js"></script>
+
 
 <style type="text/css">
     body { font-size: 17px; }
