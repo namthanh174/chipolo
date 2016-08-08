@@ -18,14 +18,14 @@
 <meta name="twitter:domain" content="chipolo.net">
 <meta name="twitter:title" content="Chipolo :: Nothing is lost">
 <meta name="twitter:description" content="Find your keys, phone, luggage or kid’s favorite toy with Chipolo Bluetooth Tracker. Stop losing things, order now. From $24.99.">
-<meta name="twitter:image:src" content="assets/site/img/chipolo_text.png">
+<meta name="twitter:image:src" content="<?php echo base_url();?>assets/site/img/chipolo_text.png">
 
-<link rel="apple-touch-icon" href="assets/site/img/favicon_apple.png">
-<link rel="icon" href="assets/site/img/favicon.ico" sizes="16x16 32x32 64x64 128x128" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" href="<?php echo base_url();?>assets/site/img/favicon_apple.png">
+<link rel="icon" href="<?php echo base_url();?>assets/site/img/favicon.ico" sizes="16x16 32x32 64x64 128x128" type="image/vnd.microsoft.icon">
 
 <!-- Custom CSS -->
-<link rel="stylesheet" type="text/css" href="assets/site/css/animate.css">
-<link rel="stylesheet" type="text/css" href="assets/site/css/output.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/site/css/animate.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/site/css/output.min.css">
 <link href="assets/site/css/chipolo.css" rel="stylesheet">
 
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">

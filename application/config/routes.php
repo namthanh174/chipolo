@@ -86,9 +86,5 @@ $route['admin/products/update/(:any)'] = 'admin/admin_products/update/$1';
 $route['admin/products/delete/(:any)'] = 'admin/admin_products/delete/$1';
 $route['admin/products/(:any)'] = 'admin/admin_products/index/$1'; //$1 = page number
 
-$route['admin/manufacturers'] = 'admin/admin_manufacturers/index';
-$route['admin/manufacturers/add'] = 'admin/admin_manufacturers/add';
-$route['admin/manufacturers/update'] = 'admin/admin_manufacturers/update';
-$route['admin/manufacturers/update/(:any)'] = 'admin/admin_manufacturers/update/$1';
-$route['admin/manufacturers/delete/(:any)'] = 'admin/admin_manufacturers/delete/$1';
-$route['admin/manufacturers/(:any)'] = 'admin/admin_manufacturers/index/$1'; //$1 = page number
+$route['shop']='site/shop';
+$route['shop/customize/(:any)']='site/shop/customize/$1';

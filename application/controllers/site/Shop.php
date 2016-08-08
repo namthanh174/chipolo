@@ -18,4 +18,19 @@ class Shop extends CI_Controller {
         $this->load->view('site/layout/layout', $data);
     }
 
+    /**
+     * Show product
+     *
+     * @params integer $id | Product id
+     * @return view
+     */
+    public function customize($id) {
+        $data = array();
+        $product = $this->products_model->get_product_by_id($id);
+        $data['product'] = $product;
+        $data['page'] = 'site/shop/customize';
+        $data['title'] = 'Chipolo Shop :: Select your package';
+        $this->load->view('site/layout/layout', $data);
+    }
+
 }
