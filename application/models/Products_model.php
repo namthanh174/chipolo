@@ -20,7 +20,7 @@ class Products_model extends CI_Model {
         $this->db->from('products');
         $this->db->where('id', $product_id);
         $query = $this->db->get();
-        return $query->result_array();
+        return $query->row();
     }
 
     /**
