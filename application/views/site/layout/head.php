@@ -8,7 +8,7 @@
 <!-- Facebook Meta -->
 <meta property="og:title" content="Chipolo :: Nothing Is Lost">
 <meta property="og:site_name" content="Chipolo - Official Website">
-<meta property="og:image" content="assets/site/img/favicon_facebook.png">
+<meta property="og:image" content="<?php echo base_url();?>assets/site/img/favicon_facebook.png">
 <meta property="og:description" content="Find your keys, phone, luggage or kid’s favorite toy with Chipolo Bluetooth Tracker. Stop losing things, order now. From $24.99.">
 
 <!-- Twitter Meta -->
@@ -26,7 +26,7 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/site/css/animate.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/site/css/output.min.css">
-<link href="assets/site/css/chipolo.css" rel="stylesheet">
+<link href="<?php echo base_url();?>assets/site/css/chipolo.css" rel="stylesheet">
 
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
 <!--[if lt IE 9]>
@@ -35,7 +35,7 @@
 <![endif]-->
 
 <!-- jquery, cookie_consent -->
-<script type="text/javascript" src="//v2.zopim.com/?3gglPJPdMweXhtc9ekWfmZzMFt5a3SCU" charset="utf-8" async=""></script><script src="https://www.google-analytics.com/plugins/ua/linkid.js" async="" type="text/javascript"></script><script src="https://www.google-analytics.com/plugins/ua/ecommerce.js" async="" type="text/javascript"></script><script src="//connect.facebook.net/en_US/fbds.js" async=""></script><script src="https://40nuggets.com/widget/js/track/track-40NM-12606-1.js" async="" type="text/javascript"></script><script src="//www.google-analytics.com/analytics.js" async=""></script><script async="" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script><script type="text/javascript" src="assets/site/js/header.min.js"></script>
+<script type="text/javascript" src="//v2.zopim.com/?3gglPJPdMweXhtc9ekWfmZzMFt5a3SCU" charset="utf-8" async=""></script><script src="https://www.google-analytics.com/plugins/ua/linkid.js" async="" type="text/javascript"></script><script src="https://www.google-analytics.com/plugins/ua/ecommerce.js" async="" type="text/javascript"></script><script src="//connect.facebook.net/en_US/fbds.js" async=""></script><script src="https://40nuggets.com/widget/js/track/track-40NM-12606-1.js" async="" type="text/javascript"></script><script src="//www.google-analytics.com/analytics.js" async=""></script><script async="" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script><script type="text/javascript" src="<?php echo base_url();?>assets/site/js/header.min.js"></script>
 
 
 <script type="text/javascript" class="cc-onconsent-analytics">

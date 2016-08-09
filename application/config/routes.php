@@ -88,3 +88,6 @@ $route['admin/products/(:any)'] = 'admin/admin_products/index/$1'; //$1 = page n
 
 $route['shop']='site/shop';
 $route['shop/customize/(:any)']='site/shop/customize/$1';
+$route['shop/shipping/(:any)']='site/shop/shipping/$1';
+$route['shop/review/(:any)']='site/shop/review/$1';
+$route['shop/send_order/(:any)'] = 'site/shop/send_order/$1';

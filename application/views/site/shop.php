@@ -47,7 +47,7 @@
                         <div class="pack-title"><?php echo $product['title'];?></div>
 
                         <div class="pack-buy-button"><span>Buy</span></div>
-                        <div class="pack-price"><?php echo $product['price'];?></div>
+                        <div class="pack-price"><?php echo $product['price'];?> USD</div>
 
                         <div class="pack-shipping"><?php echo $product['free_shipping'] == 1 ? 'Free Shipping' : '+ Shipping';?> </div>
                     </a>
