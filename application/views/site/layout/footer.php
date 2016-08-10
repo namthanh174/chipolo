@@ -96,7 +96,7 @@
                 <p>Should you be dissatisfied with our product, you may return all Chipolo(s) in their original condition within 30 days and we will provide a full refund.<br/><br/><a href="<?php echo base_url();?>terms-of-use" target="_blank"><span class="blue">Find our refund policy here.</span></a></p>
             </div>
             <div class="col-xs-4">
-                <img src="<?php echo base_url();?>assets/site/imgg/international_shipping.png" class="img-responsive" width="68" data-pin-no-hover="true">
+                <img src="<?php echo base_url();?>assets/site/img/international_shipping.png" class="img-responsive" width="68" data-pin-no-hover="true">
                 <p class="mt20"><strong>International Shipping</strong></p>
                 <p>Your Chipolo(s) will be shipped in 1-3 business days with DHL Express overseas, except for US orders. All orders are shipped with delivery signature required. You are responsible for all duties and custom taxes when picking up your Chipolo(s).</p>
             </div>

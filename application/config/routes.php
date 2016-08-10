@@ -87,3 +87,5 @@ $route['admin/products/(:any)'] = 'admin_products/index/$1'; //$1 = page number
 /* shop*/
 $route['shop']='shop';
 $route['shop/customize/(:any)']='shop/customize/$1';
+$route['shop/shipping']='shop/shipping';
+$route['shop/load-state']='shop/loadState';
