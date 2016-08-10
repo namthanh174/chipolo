@@ -1,35 +1,9 @@
-<link href="<?php echo base_url(); ?>assets/site/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo base_url(); ?>assets/site/css/chipolo_shop.css" rel="stylesheet" type="text/css"/>
-
-<div class="fp-banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <a href="https://chipolo.net/shop/customize/4">
-                    <img src="<?php echo base_url(); ?>assets/site/img/banners/family_pack_eur.jpg" class="img-responsive" nopin="nopin">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="container" id="shop-title">
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <h1 class="shop-title">Welcome to the Chipolo Shop</h1>
-            <h2 class="shop-subtitle-sm">Select your package</h2>
-        </div>
-    </div>
-</div>
-
 
 <div class="container">
     <div class="row">
         <div class="col-xs-12 text-center">
             <h1 class="shop-title-sm">Shopping cart</h1>
-            <h2 class="shop-subtitle-sm">Select the color(s) or go back to <a class="link-blue" href="/shop">Shop</a> to select a different package</h2>
+            <h2 class="shop-subtitle-sm">Select the color(s) or go back to <a class="link-blue" href="<?php echo base_url(); ?>shop">Shop</a> to select a different package</h2>
         </div>
     </div>
 
@@ -46,23 +20,23 @@
         </div>
     </div>
 
-    <form action="<?php echo base_url(); ?>shop/shipping/<?php echo $product->id; ?>" method="post">
+    <form action="" method="post">
         <div class="row spacer">
 
             <div class="col-colorpicker text-center">
 
                 <div class="picker-container noselect">
-                    <?php for($i=1;$i<=$product->quantity;$i++) { ?>
+                    <?php for ($i = 1; $i <= $product->quantity; $i++) { ?>
                         <div class="pick picker-0 active" data-index="0">
                             <input id="color-0" type="hidden" name="colors[]" value="<?php echo set_value('colors[0]'); ?>" class="hidden-selection" autocomplete="off">
                             <img src="<?php echo base_url(); ?>assets/site/img/shop/colorpicker/_blank.png" class="img-responsive">
                         </div>
-                        <?php 
-                    } ?>
+                    <?php }
+                    ?>
 
                 </div>
 
-                <p class="color-name">Available in <?php echo $product->quantity;?> fun colors.</p>
+                <p class="color-name">Available in <?php echo $product->quantity; ?> fun colors.</p>
                 <p class="picker-help-block" style="display:none;"> * Please, select a color!</p>
 
                 <div class="shop-selector noselect">
@@ -84,8 +58,17 @@
                 <div class="pack-price-sm"><?php echo $product->price; ?> USD</div>
                 <div class="pack-shipping-sm"><?php echo $product->free_shipping == 1 ? 'Free Shipping' : '+ Shipping'; ?></div>
 
+
+
+
                 <div class="pack-buttons noselect">
-                    <input type="submit" class="btn shop-btn-continue disabled" value="Continue">
+                    <input type="submit" class="btn shop-btn-continue disabled" value="Continue" name="shipping-continue">
+                    <input type="hidden" name="hid-product-id" value="<?php echo $product->id; ?>"/>
+                    <input type="hidden" name="hid-product-title" value="<?php echo $product->title; ?>"/>
+                    <input type="hidden" name="hid-product-sub-title" value="<?php echo $product->sub_title; ?>"/>
+                    <input type="hidden" name="hid-product-price" value="<?php echo $product->price; ?>"/>
+                    <input type="hidden" name="hid-product-quantity" value="<?php echo $product->quantity; ?>"/>
+
                     <a class="shop-btn-back" href="<?php echo base_url(); ?>shop">Back</a>
                 </div>
             </div>
@@ -142,9 +125,9 @@
                                 <img src="<?php echo base_url(); ?>assets/site/img/shop/gallery/thumbs/t_pink_6.jpg" class="img-repsonsive mTSThumb">
                             </li>
                         </ul>
-                        
-                        
-                        </div>
+
+
+                    </div>
                 </div>
                 <div class="thumbs-down" data-target="#carousel-gallery" data-slide="next"></div>
             </div>
@@ -164,7 +147,7 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 noselect mt10">
                 <div class="pack-buttons text-center noselect">
-                    <input type="submit" class="btn shop-btn-continue shop-btn-bottom disabled" value="Continue">
+                    <input type="submit" class="btn shop-btn-continue shop-btn-bottom disabled" value="Continue" name="shipping-continue">
                     <a class="shop-btn-back" href="<?php echo base_url(); ?>shop">Back</a>
                 </div>
             </div>
@@ -226,91 +209,11 @@
         margin: 3px 0;
     }
     /* / St patrick */
-    footer, .footer-bottom{
-        display: none;
-    }
+
 </style>
 
 
-<div class="shop-common">
-    <div class="container">
-        <hr/>
 
-
-        <div class="space80"></div>
-
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
-                <p><img src="<?php echo base_url(); ?>assets/site/img/shop/safety.png" class="img-responsive" width="64"></p>
-                <p>
-                    <strong>Safety</strong><br/>
-                    We use SSL connection for the checkout procedure, so your personal data is safe.					</p>
-            </div>
-
-            <div class="clearfix spaced visible-xs"></div>
-
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
-                <p><img src="<?php echo base_url(); ?>assets/site/img/shop/delivery.png" class="img-responsive" width="64"></p>
-                <p>
-                    <strong>Payment and Delivery</strong><br/>
-                    Your order will normally be shipped in three days time from when your order was placed.					</p>
-            </div>
-
-            <div class="clearfix spaced visible-xs"></div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
-                <p><img src="<?php echo base_url(); ?>assets/site/img/shop/packaging.png" class="img-responsive" width="64"></p>
-                <p>
-                    <strong>Packaging</strong><br/>
-                    Each Chipolo is packed individually. The Chipolo box includes one Chipolo, extra battery, a key ring and instructions.					</p>
-            </div>
-        </div>
-
-        <div class="spaced"></div>
-        <div class="row">
-            <div class="col-xs-12 text-center">
-                <p><img src="<?php echo base_url(); ?>assets/site/img/shop/shipping.png" class="img-responsive" width="64"></p>
-                <p>
-                    <strong>International Shipping</strong><br/>
-                    Your Chipolo(s) will ship in 1-2 business days DHL Express overseas. All orders are shipped with delivery signature required.<br/>You are responsible for all duties and custom taxes when picking up your Chipolo(s).					</p>
-
-            </div>
-        </div>
-
-        <div class="space80"></div>
-
-        <hr/>
-
-
-
-        <div class="row space8040">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <p class="currency-text">Prices not in your currency? Choose your territory:</p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
-                <ul class="list-inline currency-list">
-                    <li class="text-center">
-                        <a href="/shop/currency/eur" class="currency active"><span>&#8364;</span></a>
-                        <a href="/shop/currency/eur"><p>Europe</p></a>
-                    </li>
-                    <li class="text-center">
-                        <a href="/shop/currency/gbp" class="currency">&#163;</a>
-                        <a href="/shop/currency/gbp"><p>UK</p></a>
-                    </li>
-                    <li class="text-center">
-                        <a href="/shop/currency/usd" class="currency">&#36;</a>
-                        <a href="/shop/currency/usd"><p>USA</p></a>
-                    </li>
-                    <li class="text-center">
-                        <a href="/shop/currency/jpy" class="currency">&#165;</a>
-                        <a href="/shop/currency/jpy"><p>Japan</p></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 <script src="<?php echo base_url(); ?>assets/site/js/jquery_1.11.0.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/owl2/owl.carousel.min.js"></script>
 <script type="text/javascript">
@@ -464,4 +367,3 @@
         });
     };
 </script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/jquery.scroller.min.js"></script>

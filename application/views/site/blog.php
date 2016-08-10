@@ -5,7 +5,7 @@
             background-size: cover;
             padding: 130px 0;
         }
-        footer { display: none; }
+        .footer,footer { display: none; }
     </style>
 
     <div class="slide stories-header">
