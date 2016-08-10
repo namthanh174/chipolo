@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 07, 2016 at 07:02 PM
+-- Generation Time: Aug 11, 2016 at 02:17 AM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
 
@@ -340,7 +340,7 @@ CREATE TABLE IF NOT EXISTS `images` (
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
   `colors` text NOT NULL COMMENT 'Set of colors',
   `email` varchar(255) NOT NULL,
   `fullname` varchar(255) NOT NULL,
@@ -348,12 +348,20 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `address_2` varchar(255) DEFAULT NULL,
   `postal_code` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
-  `country_id` int(11) NOT NULL,
+  `country_id` varchar(11) NOT NULL,
   `state` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `total` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `product_id`, `user_id`, `colors`, `email`, `fullname`, `address_1`, `address_2`, `postal_code`, `city`, `country_id`, `state`, `phone`, `total`) VALUES
+(15, 6, 0, '["blue","yellow","blue","blue","blue","blue","orange","yellow","blue"]', 'hhdghds@gmail.com', 'dsjdjds', '123 str', '', '12131313', 'dsjdjds', 'AT', 'vnh', '+38641321123', 199.99),
+(14, 3, 0, '["green","blue","green"]', 'hhdghds@gmail.com', 'dsjdjds', '123 str', '', '12131313', 'dsjdjds', 'AU', 'vnh', '+38641321123', 69.99);
 
 -- --------------------------------------------------------
 
@@ -381,12 +389,12 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `title`, `sub_title`, `image_key`, `price`, `special_price`, `free_shipping`, `quantity`, `description`, `created_at`, `updated_at`) VALUES
-(3, 'Solo', '1x Chipolo', 'solo', 24.99, 0, 0, 1, '', '0000-00-00 00:00:00', '2016-08-07 00:22:39'),
-(2, 'Three''s A Party', '3x Chipolo', 'threes_a_party', 69.99, 0, 1, 3, '', '0000-00-00 00:00:00', '2016-08-07 12:05:01'),
-(6, 'Duet', '2x Chipolo', 'duo', 44.99, 0, 0, 2, '', '2016-08-07 00:17:37', '0000-00-00 00:00:00'),
-(7, 'Family Pack', '4x Chipolo', 'family_pack', 89.99, 0, 0, 4, '', '2016-08-07 00:18:16', '0000-00-00 00:00:00'),
-(8, 'Six Pack', '6x Chipolo', 'six_pack', 129.99, 0, 0, 6, '', '2016-08-07 00:21:30', '0000-00-00 00:00:00'),
-(9, 'Color Palette', '9x Chipolo', 'color_palette', 199.99, 0, 1, 9, '', '2016-08-07 00:22:03', '0000-00-00 00:00:00');
+(1, 'Solo', '1x Chipolo', 'solo', 24.99, 0, 0, 1, '', '0000-00-00 00:00:00', '2016-08-07 00:22:39'),
+(3, 'Three''s A Party', '3x Chipolo', 'threes_a_party', 69.99, 0, 1, 3, '', '0000-00-00 00:00:00', '2016-08-07 12:05:01'),
+(2, 'Duet', '2x Chipolo', 'duo', 44.99, 0, 0, 2, '', '2016-08-07 00:17:37', '0000-00-00 00:00:00'),
+(4, 'Family Pack', '4x Chipolo', 'family_pack', 89.99, 0, 0, 4, '', '2016-08-07 00:18:16', '0000-00-00 00:00:00'),
+(5, 'Six Pack', '6x Chipolo', 'six_pack', 129.99, 0, 0, 6, '', '2016-08-07 00:21:30', '0000-00-00 00:00:00'),
+(6, 'Color Palette', '9x Chipolo', 'color_palette', 199.99, 0, 1, 9, '', '2016-08-07 00:22:03', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -427,14 +435,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `fullname`, `address_1`, `address_2`, `postal_code`, `city`, `country_id`, `state`, `phone`, `is_actived`, `type`, `created_at`, `updated_at`) VALUES
-(1, 'namthanh174@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Thanh Vo', 'Cu Chi', NULL, '12345', 'HCM', 1, 'Cu Chi', '123456789', 1, 1, '2016-08-06 00:00:00', '2016-08-06 00:00:00');
+(1, 'namthanh174@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Thanh Vo', 'Cu Chi', NULL, '12345', 'HCM', 1, 'Cu Chi', '123456789', 1, 1, '2016-08-06 00:00:00', '2016-08-06 00:00:00'),
+(2, 'namthanh@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'vo van thanh', '', NULL, '', '', 0, '', '', 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'nam@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'tuan minh', '', NULL, '', '', 0, '', '', 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 'nam@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'tuan minh', '', NULL, '', '', 0, '', '', 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
