@@ -225,7 +225,7 @@ class Admin_products extends CI_Controller {
         //the code below wel reload the current data
         //product data 
         $data['product'] = $this->products_model->get_product_by_id($id);
-
+        
         //load the view
         $data['main_content'] = 'admin/products/edit';
         $this->load->view('includes/template', $data);

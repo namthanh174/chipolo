@@ -1,6 +1,6 @@
 <link href="<?php echo base_url(); ?>assets/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <div class="container top">
-
+<?php //var_dump($product);die; ?>
     <ul class="breadcrumb">
         <li>
             <a href="<?php echo site_url("admin"); ?>">
@@ -57,37 +57,37 @@
                 <div class="control-group">
                     <label for="inputError" class="control-label">Title</label>
                     <div class="controls">
-                        <input type="text" id="" name="title" value="<?php echo $product[0]['title']; ?>" >
+                        <input type="text" id="" name="title" value="<?php echo $product->title; ?>" >
                     </div>
                 </div>     
                 <div class="control-group">
                     <label for="inputError" class="control-label">Sub-title</label>
                     <div class="controls">
-                        <input type="text" id="" name="sub_title" value="<?php echo $product[0]['sub_title']; ?>" >
+                        <input type="text" id="" name="sub_title" value="<?php echo $product->sub_title; ?>" >
                     </div>
                 </div>     
                 <div class="control-group">
                     <label for="inputError" class="control-label">Description</label>
                     <div class="controls">
-                        <input type="text" id="" name="description" value="<?php echo $product[0]['description']; ?>" >
+                        <input type="text" id="" name="description" value="<?php echo $product->description; ?>" >
                     </div>
                 </div>     
                 <div class="control-group">
                     <label for="inputError" class="control-label">Sell Price</label>
                     <div class="controls">
-                        <input type="text" name="price" value="<?php echo $product[0]['price']; ?>">
+                        <input type="text" name="price" value="<?php echo $product->price; ?>">
                     </div>
                 </div>
                 <div class="control-group">
                     <label for="inputError" class="control-label">Special Price</label>
                     <div class="controls">
-                        <input type="text" id="" name="special_price" value="<?php echo $product[0]['special_price']; ?>">
+                        <input type="text" id="" name="special_price" value="<?php echo $product->special_price; ?>">
                     </div>
                 </div>
                 <div class="control-group">
                     <label for="inputError" class="control-label">Quantity</label>
                     <div class="controls">
-                        <input type="text" id="" name="quantity" value="<?php echo $product[0]['quantity']; ?>">
+                        <input type="text" id="" name="quantity" value="<?php echo $product->quantity; ?>">
                     </div>
                 </div>
                 <div class="control-group">
