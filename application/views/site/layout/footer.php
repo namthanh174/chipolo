@@ -1,4 +1,3 @@
-
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -153,12 +152,10 @@
     </div>
 </div>
 </div>
-
+<img src="https://sp.analytics.yahoo.com/spp.pl?a=10000&.yp=10006654"/>
+<img src="https://amplifypixel.outbrain.com/pixel?mid=008e5c3aa9f39d4390777a17f592d8c69e"/>
 <!-- jquery.effects, jquery.transform2d, jquery.flexverticalcenter. bootstrap, jquery.lettering, jquery.textillate -->
 <script type="text/javascript" src="<?php echo base_url();?>assets/site/js/output.min.js"></script>
-<<<<<<< HEAD
-
-=======
 <script type="text/javascript" src="<?php echo base_url();?>assets/site/js/chipolo.js"></script>
 
 <script type="text/javascript">
@@ -186,11 +183,9 @@
     }("https://assets.zendesk.com/embeddable_framework/main.js", "chipolo.zendesk.com"); /*]]>*/
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1674123929470730&amp;ev=PixelInitialized" /></noscript>
->>>>>>> task6
 
 <style type="text/css">
     body { font-size: 17px; }
-
     .footer { margin-bottom: 85px; }
     .footer ul { margin: 0; }
     .footer .container { padding: 0; }
@@ -199,42 +194,34 @@
         background: url(<?php echo base_url();?>assets/site/img/01_firstpage/11_Get_Chipolo_1900.jpg) center center no-repeat;
         background-size: cover;  
     }
-
     .fp-social {
         background-color: #64c7ee;
         margin-bottom: 30px;
     }
-
     .social-bg {
         background: url(<?php echo base_url();?>assets/site/img/DS_08_Follow_us.jpg) no-repeat center;
         background-size: cover;
         padding: 100px 0;
     }
-
     .fp-reviews {
         background-color: #F0F0F0;
         font-size: 18px;
     }
-
     .fp-icons {
         padding: 60px 0;
         background-color: #636363;
     }
-
     .fp-more-icons {
         padding: 60px 0;
     }
-
     .caption { padding: 0 130px; }
     a, a:link, a:active, a:hover { text-decoration: none; }
     a i, a i:hover { text-decoration: none; }
-
     #videoPopup {
         color: #63c8ed;
         font-weight: 600;
         font-size: 26px;
     }
-
     #videoPopup i {
         background-color: #63c8ed;
         border-radius: 50px;
@@ -243,129 +230,104 @@
         margin-left: 8px;
         font-size: 21px;
     }
-
     #videoPopup:hover i {
         background-color: #5EB7D8;
     }
-
     .fp-header-landing {
         background: url('assets/site/img/DS_01_Always_Know_Where_Your_Things_Are_1900.jpg') no-repeat center center;
         background-size: cover;
         padding: 170px 0;
     }
-
     .slide-content-landing-keys {
         font-size: 17px;
         position: relative;
         text-align: left;
     }
-
     .btn-landing, .btn-landing:hover {
         background-color: #e74c3c;
     }
-
     .slide-content-landing-keys .landing-keys-title {
         text-transform: uppercase;
         font-size: 54px;
         font-weight: bold;
     }
-
     .slide-content-landing-keys .landing-keys-text {
         padding: 40px 0;
         font-size: 36px;
         margin: 0;
     }
-
     .slide-content-landing-keys .landing-keys-video {
         margin: 0;
     }
-
     .more-features {
         font-weight: bold;
     }
-
     .btn-blue, btn-blue:hover {
         font-size: 20px!important;
         font-weight: bold!important;
     }
-
     .btn-blue.normal, btn-blue.normal:hover {
         font-size: 14px!important;
         font-weight: normal!important;
     }
-
     .pack-price {
         color: #e74c3c;
         font-size: 20px;
         font-weight: 400;
     }
-
     .fp-whatis {
         background: url('<?php echo base_url();?>assets/site/img/DS_03_Couple.jpg') no-repeat center center;
         background-size: cover;
         padding: 347px 0;
     }
-
     .fp-whychoose {
         padding-bottom: 60px;
     }
-
     .fp-setup {
         padding: 60px 0;
     }
-
     .fp-features {
         padding: 60px 0;
     }
-
     .fp-banner {
         background: #D9D9D9;
     }
-
     .fp-relax {
         background: url('assets/site/img/live-more-relaxed-life.jpg') no-repeat center center;
         background-size: cover;
         padding: 270px 0;
     }
-
     h3 {
         font-size: 16px;
         font-weight: bold;
     }
-
     .button-buy.standard {
         text-transform: none;
         margin: 0;
         font-size: 18px;
         font-weight: bold;
     }
-
     .button-buy.standard:hover {
         background-color: #d34739;
     }
-
     .feature-battery {
         padding: 5px 0 5px 100px;
         background: url(<?php echo base_url();?>assets/site/img/icons/DS_01_battery.png) no-repeat 0 22px;
         background-size: 70px 70px;
     }
-
     .feature-range {
         padding: 15px 0 15px 100px;
         background: url(<?php echo base_url();?>assets/site/img/icons/DS_02_range.png) no-repeat 0 22px;
         background-size: 70px 70px;
     }
-
     .feature-sound {
         padding: 5px 0 5px 100px;
         background: url(<?php echo base_url();?>assets/site/img/icons/DS_03_sound.png) no-repeat 0 22px;
         background-size: 70px 70px;
     }
-
     a span.blue {
         color: #63c8ed;
     }
-
     a span.blue:hover {
         color: #5EB7D8;
     }
@@ -373,7 +335,6 @@
     .btn-tw { background: url(<?php echo base_url();?>assets/site/img/btn_tw_on.png) no-repeat 0 0; }
     .btn-pt { background: url(<?php echo base_url();?>assets/site/img/btn_pt_on.png) no-repeat 0 0; }
     .btn-insta { background: url(<?php echo base_url();?>assets/site/img/btn_insta_on.png) no-repeat 0 0; }
-
     /*footer, .footer-bottom {
         display: none;
     }*/

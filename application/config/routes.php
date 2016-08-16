@@ -1,7 +1,5 @@
 <?php
-
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 /*
   | -------------------------------------------------------------------------
   | URI ROUTING
@@ -51,16 +49,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   |		my-controller/my-method	-> my_controller/my_method
  */
 $route['default_controller'] = 'home';
-<<<<<<< HEAD
-$route['how-it-works']='home/howItWork';
-$route['design']='home/design';
-$route['blog']='home/blog';
-$route['support']='home/support';
-$route['jobs']='home/job';
-$route['login']='home/login';
-=======
->>>>>>> task6
-
 $route['how-it-works'] = 'site/how_it_work';
 $route['design'] = 'site/design';
 $route['blog'] = 'site/blog';
@@ -74,7 +62,6 @@ $route['user/create_member'] = 'site/user/create_member';
 $route['user/signup'] = 'site/user/signup';
 $route['user/login'] = 'site/user';
 $route['user/signout'] = 'site/user/logout';
-
 $route['business'] = 'site/business';
 $route['kickstarter'] = 'site/kickstarter';
 $route['press'] = 'site/press';
@@ -83,10 +70,8 @@ $route['terms-of-use'] = 'site/terms_of_use';
 $route['returns-and-refunds'] = 'site/refund';
 $route['contact'] = 'site/contact';
 $route['reviews'] = 'site/review';
-
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
 /* admin */
 $route['admin'] = 'admin/user/index';
 $route['admin/signup'] = 'admin/user/signup';
@@ -94,27 +79,15 @@ $route['admin/create_member'] = 'admin/user/create_member';
 $route['admin/login'] = 'admin/user/index';
 $route['admin/logout'] = 'admin/user/logout';
 $route['admin/login/validate_credentials'] = 'admin/user/validate_credentials';
-
 $route['admin/products'] = 'admin/admin_products/index';
 $route['admin/products/add'] = '/admin/admin_products/add';
 $route['admin/products/update'] = 'admin/admin_products/update';
 $route['admin/products/update/(:any)'] = 'admin/admin_products/update/$1';
 $route['admin/products/delete/(:any)'] = 'admin/admin_products/delete/$1';
 $route['admin/products/(:any)'] = 'admin/admin_products/index/$1'; //$1 = page number
-
 $route['shop'] = 'site/shop';
-
-
-<<<<<<< HEAD
-/* shop*/
-$route['shop']='shop';
-$route['shop/customize/(:any)']='shop/customize/$1';
-$route['shop/shipping']='shop/shipping';
-$route['shop/load-state']='shop/loadState';
-=======
 $route['shop/customize/(:any)'] = 'site/shop/customize/$1';
 $route['shop/shipping'] = 'site/shop/shipping';
 $route['shop/review'] = 'site/shop/review';
 $route['shop/ordered'] = 'site/shop/ordered';
 $route['shop/load-state'] = 'site/shop/loadState';
->>>>>>> task6

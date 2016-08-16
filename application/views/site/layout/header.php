@@ -2,11 +2,7 @@
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle-cart visible-xs">
-<<<<<<< HEAD
-                <a href="/shop"><img src="<?php echo base_url(); ?>assets/site/img/shop_icon.png" class="img-responsive"></a>
-=======
                 <a href="<?php echo base_url(); ?>shop"><img src="<?php echo base_url(); ?>assets/site/img/shop_icon.png" class="img-responsive"></a>
->>>>>>> task6
             </button>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                 <span class="sr-only">Toggle Navigation</span>
