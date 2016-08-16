@@ -111,8 +111,8 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12">
                 <ul class="footer-main list-inline">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/how-it-works">How It Works</a></li>
+                    <li><a href="<?php echo base_url(); ?>">Home</a></li>
+                    <li><a href="<?php echo base_url(); ?>how-it-works">How It Works</a></li>
                     <li><a href="<?php echo base_url(); ?>design">Design</a></li>
                     <li><a href="<?php echo base_url(); ?>blog">Blog</a></li>
                     <li><a href="<?php echo base_url(); ?>support">Support</a></li>
@@ -156,7 +156,37 @@
 
 <!-- jquery.effects, jquery.transform2d, jquery.flexverticalcenter. bootstrap, jquery.lettering, jquery.textillate -->
 <script type="text/javascript" src="<?php echo base_url();?>assets/site/js/output.min.js"></script>
+<<<<<<< HEAD
 
+=======
+<script type="text/javascript" src="<?php echo base_url();?>assets/site/js/chipolo.js"></script>
+
+<script type="text/javascript">
+// Facebook Pixels
+    (function () {
+        var _fbq = window._fbq || (window._fbq = []); if (!_fbq.loaded) {
+            var fbds = document.createElement('script'); fbds.async = true; fbds.src = '//connect.facebook.net/en_US/fbds.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fbds, s); _fbq.loaded = true;
+        }
+        _fbq.push(['addPixelId', '1674123929470730']);})(); window._fbq = window._fbq || []; window._fbq.push(['track', 'PixelInitialized', {}]);
+// Zendesk Widget
+    /*<![CDATA[*/window.zEmbed || function (e, t) {
+        var n, o, d, i, s, a = [], r = document.createElement("iframe");
+        window.zEmbed = function () {
+            a.push(arguments)
+        }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+        try {
+            o = s
+        } catch (c) {
+            n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s
+        }
+        o.open()._l = function () {
+            var o = this.createElement("script");
+            n && (this.domain = n), o.id = "js-iframe-async", o.src = e, this.t = +new Date, this.zendeskHost = t, this.zEQueue = a, this.body.appendChild(o)
+        }, o.write('<body onload="document._l();">'), o.close()
+    }("https://assets.zendesk.com/embeddable_framework/main.js", "chipolo.zendesk.com"); /*]]>*/
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1674123929470730&amp;ev=PixelInitialized" /></noscript>
+>>>>>>> task6
 
 <style type="text/css">
     body { font-size: 17px; }
@@ -166,7 +196,7 @@
     .footer .container { padding: 0; }
     footer {
         padding: 140px 0;
-        background: url(assets/site/img/01_firstpage/11_Get_Chipolo_1900.jpg) center center no-repeat;
+        background: url(<?php echo base_url();?>assets/site/img/01_firstpage/11_Get_Chipolo_1900.jpg) center center no-repeat;
         background-size: cover;  
     }
 
@@ -176,7 +206,7 @@
     }
 
     .social-bg {
-        background: url(assets/site/img/DS_08_Follow_us.jpg) no-repeat center;
+        background: url(<?php echo base_url();?>assets/site/img/DS_08_Follow_us.jpg) no-repeat center;
         background-size: cover;
         padding: 100px 0;
     }
@@ -271,7 +301,7 @@
     }
 
     .fp-whatis {
-        background: url('assets/site/img/DS_03_Couple.jpg') no-repeat center center;
+        background: url('<?php echo base_url();?>assets/site/img/DS_03_Couple.jpg') no-repeat center center;
         background-size: cover;
         padding: 347px 0;
     }
@@ -316,19 +346,19 @@
 
     .feature-battery {
         padding: 5px 0 5px 100px;
-        background: url(assets/site/img/icons/DS_01_battery.png) no-repeat 0 22px;
+        background: url(<?php echo base_url();?>assets/site/img/icons/DS_01_battery.png) no-repeat 0 22px;
         background-size: 70px 70px;
     }
 
     .feature-range {
         padding: 15px 0 15px 100px;
-        background: url(assets/site/img/icons/DS_02_range.png) no-repeat 0 22px;
+        background: url(<?php echo base_url();?>assets/site/img/icons/DS_02_range.png) no-repeat 0 22px;
         background-size: 70px 70px;
     }
 
     .feature-sound {
         padding: 5px 0 5px 100px;
-        background: url(assets/site/img/icons/DS_03_sound.png) no-repeat 0 22px;
+        background: url(<?php echo base_url();?>assets/site/img/icons/DS_03_sound.png) no-repeat 0 22px;
         background-size: 70px 70px;
     }
 
@@ -339,10 +369,10 @@
     a span.blue:hover {
         color: #5EB7D8;
     }
-    .btn-fb { background: url(assets/site/img/btn_fb_on.png) no-repeat 0 0; }
-    .btn-tw { background: url(assets/site/img/btn_tw_on.png) no-repeat 0 0; }
-    .btn-pt { background: url(assets/site/img/btn_pt_on.png) no-repeat 0 0; }
-    .btn-insta { background: url(assets/site/img/btn_insta_on.png) no-repeat 0 0; }
+    .btn-fb { background: url(<?php echo base_url();?>assets/site/img/btn_fb_on.png) no-repeat 0 0; }
+    .btn-tw { background: url(<?php echo base_url();?>assets/site/img/btn_tw_on.png) no-repeat 0 0; }
+    .btn-pt { background: url(<?php echo base_url();?>assets/site/img/btn_pt_on.png) no-repeat 0 0; }
+    .btn-insta { background: url(<?php echo base_url();?>assets/site/img/btn_insta_on.png) no-repeat 0 0; }
 
     /*footer, .footer-bottom {
         display: none;

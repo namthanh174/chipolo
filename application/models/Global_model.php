@@ -1,7 +1,11 @@
 <?php
+<<<<<<< HEAD
 
 class Global_model extends CI_Model {
 
+=======
+class Global_model extends CI_Model {
+>>>>>>> task6
     /**
      * Responsable for auto load the database
      * @return void
@@ -9,7 +13,10 @@ class Global_model extends CI_Model {
     public function __construct() {
     	$this->load->database();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> task6
     /**
      * Get product by his is
      * @param N/A

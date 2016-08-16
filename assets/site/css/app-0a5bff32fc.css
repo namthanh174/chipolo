@@ -13385,11 +13385,11 @@ label {
   text-decoration: underline;
 }
 
-/*.community-signin,
+.community-signin,
 .community-signup {
   background: url(/img/background_ny.jpg) 0 0 no-repeat;
   background-size: cover;
-}*/
+}
 
 .community-signin .container-fluid,
 .community-signup .container-fluid {

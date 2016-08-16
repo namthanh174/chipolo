@@ -8,7 +8,7 @@
 <!-- Facebook Meta -->
 <meta property="og:title" content="Chipolo :: Nothing Is Lost">
 <meta property="og:site_name" content="Chipolo - Official Website">
-<meta property="og:image" content="assets/site/img/favicon_facebook.png">
+<meta property="og:image" content="<?php echo base_url();?>assets/site/img/favicon_facebook.png">
 <meta property="og:description" content="Find your keys, phone, luggage or kid’s favorite toy with Chipolo Bluetooth Tracker. Stop losing things, order now. From $24.99.">
 
 <!-- Twitter Meta -->
@@ -35,11 +35,84 @@
 <![endif]-->
 
 <!-- jquery, cookie_consent -->
+<<<<<<< HEAD
 <script async="" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/site/js/header.min.js"></script>
 <link media="all" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin" rel="stylesheet">
 <style type="text/css">.fancybox-margin{margin-right:14px;}</style>
 <style type="text/css" __jx__id="___$_2" class="jx_ui_StyleSheet" media="print">.zopim { display: none !important }</style><style type="text/css">.fortyn_popup_frame input,.fortyn_popup_frame input[type=text],.fortyn_popup_frame textarea{margin:0 0 10px;vertical-align:top;font-family:Arial,Helvetica,sans-serif;line-height:normal;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:8px;width:100%;border:2px solid #B3B1B1;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;font-size:100%;height:36px}.fortyn_popup_frame ol,.fortyn_popup_frame ul{list-style:none}.fortyn_popup_frame blockquote,.fortyn_popup_frame q{quotes:none}.fortyn_popup_frame table,.fortyn_popup_frame table td{padding:0;border:none;border-collapse:collapse}.fortyn_popup_frame embed,.fortyn_popup_frame img{vertical-align:top}.fortyn_input_placeholder{color:#aaa}.fortyn_popup_frame{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:15px;color:#fff;background-color:#000;min-width:300px;max-width:700px;margin:5px;padding:15px;position:absolute;border:5px solid #fff;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px}.fortyn_popup_frame .fortyn_popup_close{top:-13px;right:-13px;background:#000;width:22px;height:22px;line-height:22px;position:absolute;border:solid #fff;border-radius:35px;-webkit-border-radius:35px;-moz-border-radius:35px;font-size:18px;font-weight:700;text-align:center;cursor:pointer}.fortyn_popup_frame .fortyn_popup_close:hover{box-shadow:0 0 11px #fff}.fortyn_popup_frame .fortyn_popup_label{padding:0 0 8px}.fortyn_popup_frame .fortyn_popup_subtitle{font-size:16px;line-height:18px;padding:8px 0}.fortyn_popup_frame .fortyn_popup_error{color:red;font-size:15px;text-align:center}.fortyn_popup_frame .fortyn_popup_email{display:flex}.fortyn_popup_frame .fortyn_popup_interest textarea{height:100px}.fortyn_popup_frame .fortyn_popup_submit{float:right;background:#fed500;margin:10px 0 0;padding:8px 13px;color:#000;font-size:17px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;cursor:pointer;box-shadow:0 0 1px #fff;font-weight:700}.fortyn_popup_frame .fortyn_popup_submit_link{float:right;margin:20px 0 0;color:#fff;text-decoration:underline}.fortyn_popup_frame .fortyn_popup_submit:hover{box-shadow:0 0 5px #fff}</style><style class="firebugResetStyles" type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+=======
+<script type="text/javascript" src="//v2.zopim.com/?3gglPJPdMweXhtc9ekWfmZzMFt5a3SCU" charset="utf-8" async=""></script><script src="https://www.google-analytics.com/plugins/ua/linkid.js" async="" type="text/javascript"></script><script src="https://www.google-analytics.com/plugins/ua/ecommerce.js" async="" type="text/javascript"></script><script src="//connect.facebook.net/en_US/fbds.js" async=""></script><script src="https://40nuggets.com/widget/js/track/track-40NM-12606-1.js" async="" type="text/javascript"></script><script src="//www.google-analytics.com/analytics.js" async=""></script><script async="" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script><script type="text/javascript" src="<?php echo base_url();?>assets/site/js/header.min.js"></script>
+
+
+<script type="text/javascript" class="cc-onconsent-analytics">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+
+    ga('create', 'UA-41263747-1', 'auto', {'allowLinker': true});
+    // ecommerce
+    ga('require', 'ecommerce');
+    // enhanced ecommerce
+    // ga('require', 'ec');
+
+    ga('require', 'linkid', 'linkid.js');
+    ga('require', 'displayfeatures');
+    ga('require', 'linker');
+    ga('linker:autoLink', ['bankart.si', 'paypal.com', 'adyen.com']);
+    ga('send', 'pageview');
+
+    (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () {
+            (h.hj.q = h.hj.q || []).push(arguments)
+        };
+        h._hjSettings = {hjid: 156668, hjsv: 5};
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+
+
+    var _40nmcid = '40NM-12606-1';
+    (function ()
+    {
+        var nm = document.createElement('script');
+        nm.type = 'text/javascript';
+        nm.async = true;
+        nm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + '40nuggets.com/widget/js/track/track-' + _40nmcid + '.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(nm, s);
+    }
+    )();
+
+    // <![CDATA[
+    cc.initialise({
+        cookies: {
+            analytics: {}
+        },
+        settings: {
+            consenttype: "implicit",
+            bannerPosition: "bottom",
+            style: "light",
+            hideprivacysettingstab: true,
+            disableallsites: true
+        }
+    });
+    // ]]>
+</script><script src="//static.hotjar.com/c/hotjar-156668.js?sv=5" async=""></script>
+<link media="all" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin" rel="stylesheet"><style type="text/css">.fancybox-margin{margin-right:14px;}</style><script src="https://script.hotjar.com/modules-5d1a8bf72bf05947875b5bb4e2648210.js"></script><style type="text/css" __jx__id="___$_2" class="jx_ui_StyleSheet" media="print">.zopim { display: none !important }</style><style type="text/css">.fortyn_popup_frame input,.fortyn_popup_frame input[type=text],.fortyn_popup_frame textarea{margin:0 0 10px;vertical-align:top;font-family:Arial,Helvetica,sans-serif;line-height:normal;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:8px;width:100%;border:2px solid #B3B1B1;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;font-size:100%;height:36px}.fortyn_popup_frame ol,.fortyn_popup_frame ul{list-style:none}.fortyn_popup_frame blockquote,.fortyn_popup_frame q{quotes:none}.fortyn_popup_frame table,.fortyn_popup_frame table td{padding:0;border:none;border-collapse:collapse}.fortyn_popup_frame embed,.fortyn_popup_frame img{vertical-align:top}.fortyn_input_placeholder{color:#aaa}.fortyn_popup_frame{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:15px;color:#fff;background-color:#000;min-width:300px;max-width:700px;margin:5px;padding:15px;position:absolute;border:5px solid #fff;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px}.fortyn_popup_frame .fortyn_popup_close{top:-13px;right:-13px;background:#000;width:22px;height:22px;line-height:22px;position:absolute;border:solid #fff;border-radius:35px;-webkit-border-radius:35px;-moz-border-radius:35px;font-size:18px;font-weight:700;text-align:center;cursor:pointer}.fortyn_popup_frame .fortyn_popup_close:hover{box-shadow:0 0 11px #fff}.fortyn_popup_frame .fortyn_popup_label{padding:0 0 8px}.fortyn_popup_frame .fortyn_popup_subtitle{font-size:16px;line-height:18px;padding:8px 0}.fortyn_popup_frame .fortyn_popup_error{color:red;font-size:15px;text-align:center}.fortyn_popup_frame .fortyn_popup_email{display:flex}.fortyn_popup_frame .fortyn_popup_interest textarea{height:100px}.fortyn_popup_frame .fortyn_popup_submit{float:right;background:#fed500;margin:10px 0 0;padding:8px 13px;color:#000;font-size:17px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;cursor:pointer;box-shadow:0 0 1px #fff;font-weight:700}.fortyn_popup_frame .fortyn_popup_submit_link{float:right;margin:20px 0 0;color:#fff;text-decoration:underline}.fortyn_popup_frame .fortyn_popup_submit:hover{box-shadow:0 0 5px #fff}</style><style class="firebugResetStyles" type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+>>>>>>> task6
     /** reset styling **/
     .firebugResetStyles {
         z-index: 2147483646 !important;

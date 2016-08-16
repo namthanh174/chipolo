@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
         <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css' />
-        <link href="assets/site/css/app-0a5bff32fc.css" rel="stylesheet" type='text/css' />
+        <link href="<?php echo base_url(); ?>assets/site/css/app-0a5bff32fc.css" rel="stylesheet" type='text/css' />
 
         <script type="text/javascript" class="cc-onconsent-analytics">
             (function (i, s, o, g, r, a, m) {
@@ -33,15 +33,15 @@
             ga('require', 'linker');
             ga('send', 'pageview');
         </script>    <script type="text/javascript">
-        String.prototype.replaceArray = function (find, replace) {
-            var replaceString = this;
-            for (var i = 0; i < find.length; i++) {
-                replaceString = replaceString.replace(find[i], replace[i]);
-            }
-            return replaceString;
-        };
+            String.prototype.replaceArray = function (find, replace) {
+                var replaceString = this;
+                for (var i = 0; i < find.length; i++) {
+                    replaceString = replaceString.replace(find[i], replace[i]);
+                }
+                return replaceString;
+            };
 
-        var jsTrans = {"auth": {"successful_deauthorized": "You have successfully deauthorized {:provider:} with your account.", "success_provider_added": "You have successfully authorized {:provider:} with your account.", "current_password_invalid": "The current password is invalid", "account_confirmation_delete": "We sent you an email for account delete confirmation.", "error": "Error while processing your request. Please try later."}, "legacy": {"address_unvailable": "Address unavailable", "latitude": "Latitude", "longitude": "Longitude", "no_connected_devices": "No connected devices", "sharing_request": "You have successfully <strong>{:action:}<\/strong> a sharing request for <strong>{:chipolo_name:}<\/strong> from <strong>{:first_name:} {:last_name:}<\/strong>"}, "network": {"settings_updated": "Account settings were updated successfully.", "error": "Ups... we seem to have encountered an error. Please try again.", "chipolo_lost": "Your {:typeString:} was marked as lost. The Chipolo Community will now actively search for it. We will notify you when it's found", "alert_to_device": "We've sent an alert to your device. It will ring for about 10 seconds.", "send_message": "Send message", "message_sent": "Message sent successfully!", "location_update_success": "Location update request was sent successfully. The Chipolos locations will be updated automatically within the next 30 seconds.", "auth_fail_redirect": "Your session has expired. You will be redirected to the Sign in page.", "auth_fail_refresh": "An error occured. Please refresh the page!", "not_available": "not available", "same_day": "[Today at] {:time_format}", "next_day": "[Tomorrow at] {:time_format}", "next_week": "{:long_day_format} [at] {:time_format}", "last_day": "[Yesterday at] {:time_format}", "last_week": "[Last] {:long_day_format} [at] {:time_format}", "last_seen": "Last seen: {:last_seen}", "disconnnected_from_provider_type": "Disconnect from {:provider_type}", "connect_to_provider_type": "Connect with {:provider_type}", "last_known_location": "Last known location:", "with_full_name": "With {:full_name}", "glad_to_find_it": "We are glad you found your {:type}.", "a_few_seconds_ago": "a few seconds ago", "unavailable": "unavailable", "location_unavailable": "Location unavailable.", "updating": "updating..."}};
+            var jsTrans = {"auth": {"successful_deauthorized": "You have successfully deauthorized {:provider:} with your account.", "success_provider_added": "You have successfully authorized {:provider:} with your account.", "current_password_invalid": "The current password is invalid", "account_confirmation_delete": "We sent you an email for account delete confirmation.", "error": "Error while processing your request. Please try later."}, "legacy": {"address_unvailable": "Address unavailable", "latitude": "Latitude", "longitude": "Longitude", "no_connected_devices": "No connected devices", "sharing_request": "You have successfully <strong>{:action:}<\/strong> a sharing request for <strong>{:chipolo_name:}<\/strong> from <strong>{:first_name:} {:last_name:}<\/strong>"}, "network": {"settings_updated": "Account settings were updated successfully.", "error": "Ups... we seem to have encountered an error. Please try again.", "chipolo_lost": "Your {:typeString:} was marked as lost. The Chipolo Community will now actively search for it. We will notify you when it's found", "alert_to_device": "We've sent an alert to your device. It will ring for about 10 seconds.", "send_message": "Send message", "message_sent": "Message sent successfully!", "location_update_success": "Location update request was sent successfully. The Chipolos locations will be updated automatically within the next 30 seconds.", "auth_fail_redirect": "Your session has expired. You will be redirected to the Sign in page.", "auth_fail_refresh": "An error occured. Please refresh the page!", "not_available": "not available", "same_day": "[Today at] {:time_format}", "next_day": "[Tomorrow at] {:time_format}", "next_week": "{:long_day_format} [at] {:time_format}", "last_day": "[Yesterday at] {:time_format}", "last_week": "[Last] {:long_day_format} [at] {:time_format}", "last_seen": "Last seen: {:last_seen}", "disconnnected_from_provider_type": "Disconnect from {:provider_type}", "connect_to_provider_type": "Connect with {:provider_type}", "last_known_location": "Last known location:", "with_full_name": "With {:full_name}", "glad_to_find_it": "We are glad you found your {:type}.", "a_few_seconds_ago": "a few seconds ago", "unavailable": "unavailable", "location_unavailable": "Location unavailable.", "updating": "updating..."}};
         </script>
 
     </head>
@@ -51,7 +51,7 @@
         <div id="header">
             <div class="container">
                 <div class="col-md-6">
-                    <a href="/" class="navbar-brand"><img src="assets/site/img/logo.png" width="45" height="45" class="img-responsive"></a>
+                    <a href="/" class="navbar-brand"><img src="<?php echo base_url(); ?>assets/site/img/logo.png" width="45" height="45" class="img-responsive"></a>
                 </div>
                 <div class="col-md-6 text-right">
                     <ul class="list-inline header-menu">
@@ -86,14 +86,11 @@
                     <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 
                         <div class="form-placeholder">
-                            <form class="form signin-form" enctype="multipart/form-data" accept-charset="utf-8" method="post" action="/signin">
-                                <input type="hidden" name="_token" value="OJcuGerI159A0vr82G9XHKtq5htp9lm7nMnh3Lct">
+                            <form class="form signin-form"  accept-charset="utf-8" method="post" action="<?php echo base_url(); ?>user/login/validate_credentials">
 
-                                <input type="hidden" name="device_uuid" id="device_uuid" value="">
-                                <input type="hidden" name="battery_level" id="battery_level" value="100">
 
                                 <div class="form-group ">
-                                    <input type="text" name="email" class="form-control" value="" placeholder="E-mail">
+                                    <input type="text" name="user_name" class="form-control" value="" placeholder="E-mail">
                                 </div>
 
                                 <div class="form-group ">
@@ -102,7 +99,7 @@
 
 
                                 <div class="form-group">
-                                    <button type="submit" id="login" class="form-control btn btn-blue">Sign In</button>
+                                    <button type="submit" id="login" name="login" class="form-control btn btn-blue">Sign In</button>
                                 </div>
 
                                 <div class="form-group row-or">
@@ -127,7 +124,7 @@
 
                         </div>
 
-                        <p>Don&#039;t have an account? <a href="http://app.chipolo.net/signup" class="link-emphasized">Sign up</a>
+                        <p>Don&#039;t have an account? <a href="<?php echo base_url(); ?>user/signup" class="link-emphasized">Sign up</a>
                         <p><a href="#" id="button-forgot-password" class="link-emphasized">Forgot your password?</a></p>
 
                     </div>
@@ -184,29 +181,38 @@
             };
         </script>
         <script>(function () {
-        var w = window;var ic = w.Intercom;if (typeof ic === "function") {
-            ic('reattach_activator');ic('update', intercomSettings);} else {
-            var d = document;var i = function () {
-                i.c(arguments)};i.q = [];i.c = function (args) {
-                i.q.push(args)
-            };
-            w.Intercom = i;
-            function l() {
-                var s = d.createElement('script');s.type = 'text/javascript';
-                s.async = true;
-                s.src = 'https://widget.intercom.io/widget/wjjw3w95';
-                var x = d.getElementsByTagName('script')[0];
-                x.parentNode.insertBefore(s, x);
-            }
-            if (w.attachEvent) {
-                w.attachEvent('onload', l);
-            } else {
-                w.addEventListener('load', l, false);
-            }
-        }
-    })()</script>
+                var w = window;
+                var ic = w.Intercom;
+                if (typeof ic === "function") {
+                    ic('reattach_activator');
+                    ic('update', intercomSettings);
+                } else {
+                    var d = document;
+                    var i = function () {
+                        i.c(arguments)
+                    };
+                    i.q = [];
+                    i.c = function (args) {
+                        i.q.push(args)
+                    };
+                    w.Intercom = i;
+                    function l() {
+                        var s = d.createElement('script');
+                        s.type = 'text/javascript';
+                        s.async = true;
+                        s.src = 'https://widget.intercom.io/widget/wjjw3w95';
+                        var x = d.getElementsByTagName('script')[0];
+                        x.parentNode.insertBefore(s, x);
+                    }
+                    if (w.attachEvent) {
+                        w.attachEvent('onload', l);
+                    } else {
+                        w.addEventListener('load', l, false);
+                    }
+                }
+            })()</script>
 
-        <script src="assets/site/js/common-08f5f703e2.js"></script>
+        <script src="<?php echo base_url(); ?>assets/site/js/common-08f5f703e2.js"></script>
         <script type="text/javascript">
             $(function () {
                 Auth.initHello('825285417520572', '83947113929-ft7ei0236nl9uh8frb7c063j4cdgnvjl.apps.googleusercontent.com', 'https://app.chipolo.net/google-redirect');
@@ -293,7 +299,7 @@
         </script>
         <style>
             .community-signin, .community-signup {
-                background: url(assets/site/img/background_ny.jpg) 0 0 no-repeat;
+                background: url(<?php echo base_url(); ?>assets/site/img/background_ny.jpg) 0 0 no-repeat;
                 background-size: cover;
             }
         </style>
